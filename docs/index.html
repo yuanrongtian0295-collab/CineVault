@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineVault / &#24433;&#5323; &#19979;&#36733;</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">CineVault / &#24433;&#5323;</div>
+          <h1>&#26412;&#22320; AI &#24433;&#35270;&#36164;&#20135;&#24211;</h1>
+          <p class="lead">
+            &#19979;&#36733;&#26368;&#26032; Windows &#23433;&#35013;&#21253;&#12290;&#35206;&#30422;&#23433;&#35013;&#19981;&#20250;&#31227;&#21160;&#12289;&#21024;&#38500;&#25110;&#20462;&#25913;&#20320;&#30340;&#21407;&#22987;&#32032;&#26448;&#65307;&#21319;&#32423;&#21069;&#20173;&#24314;&#35758;&#22312;&#24212;&#29992;&#35774;&#32622;&#39029;&#25163;&#21160;&#22791;&#20221;&#25968;&#25454;&#24211;&#12290;
+          </p>
+        </div>
+        <aside class="download-card">
+          <div>
+            <div class="version">&#26368;&#26032;&#29256;&#26412;</div>
+            <h2 id="version">v0.1.1</h2>
+          </div>
+          <a id="downloadButton" class="button" href="https://your-domain.com/cinevault/CineVault-Setup-0.1.1.exe">
+            &#19979;&#36733; Windows &#23433;&#35013;&#21253;
+          </a>
+          <a class="button secondary" href="./update-manifest.json">&#26597;&#30475;&#26356;&#26032;&#28165;&#21333;</a>
+          <div class="meta">
+            <span id="releaseDate">&#21457;&#24067;&#26085;&#26399;&#65306;2026-06-24</span>
+            <span id="fileSize">&#23433;&#35013;&#21253;&#22823;&#23567;&#65306;191 MB</span>
+            <span>&#36866;&#29992;&#20110; Windows NSIS &#23433;&#35013;&#21253;</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>&#26356;&#26032;&#20869;&#23481;</h2>
+          <ul id="notes">
+            <li>&#26032;&#22686;&#36828;&#31243;&#26356;&#26032;&#25552;&#37266;&#12290;</li>
+            <li>&#26032;&#22686; CineVault &#38745;&#24577;&#19979;&#36733;&#39029;&#12290;</li>
+            <li>&#20462;&#22797;&#26356;&#26032;&#25552;&#31034;&#21644;&#19979;&#36733;&#20837;&#21475;&#30340;&#20013;&#25991;&#26174;&#31034;&#12290;</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2>&#23433;&#35013;&#35828;&#26126;</h2>
+          <ul>
+            <li>&#19979;&#36733;&#23433;&#35013;&#21253;&#24182;&#36816;&#34892;&#12290;</li>
+            <li>&#36873;&#25321;&#21407;&#23433;&#35013;&#30446;&#24405;&#35206;&#30422;&#23433;&#35013;&#21363;&#21487;&#12290;</li>
+            <li>&#23433;&#35013;&#23436;&#25104;&#21518;&#37325;&#26032;&#25171;&#24320; CineVault&#12290;</li>
+          </ul>
+        </article>
+        <article class="panel warning">
+          <h2>&#25968;&#25454;&#23433;&#20840;</h2>
+          <p>
+            CineVault &#40664;&#35748;&#21482;&#26356;&#26032;&#24212;&#29992;&#31243;&#24207;&#65292;&#19981;&#20250;&#28165;&#31354;&#26412;&#22320;&#25968;&#25454;&#24211;&#65292;&#20063;&#19981;&#20250;&#31227;&#21160;&#20320;&#30340;&#21407;&#22987;&#32032;&#26448;&#12290;&#20026;&#20102;&#31283;&#22949;&#65292;&#21319;&#32423;&#21069;&#21487;&#20197;&#22312;&#35774;&#32622;&#39029;&#25191;&#34892;&#19968;&#27425;&#25163;&#21160;&#22791;&#20221;&#12290;
+          </p>
+        </article>
+      </section>
+
+      <div class="footer">&#22914;&#26524;&#20027;&#19979;&#36733;&#38142;&#25509;&#19981;&#21487;&#29992;&#65292;&#21487;&#20197;&#22312;&#36825;&#37324;&#39044;&#30041;&#32593;&#30424;&#25110;&#22791;&#29992;&#19979;&#36733;&#22320;&#22336;&#12290;</div>
+    </main>
+
+    <script>
+      fetch('./update-manifest.json')
+        .then((response) => (response.ok ? response.json() : null))
+        .then((manifest) => {
+          if (!manifest) return
+          document.getElementById('version').textContent = `v${manifest.version}`
+          document.getElementById('releaseDate').textContent = `发布日期：${manifest.releaseDate}`
+          document.getElementById('fileSize').textContent = `安装包大小：${manifest.fileSize || '待填写'}`
+          const downloadUrl = manifest.installerUrl || manifest.downloadUrl
+          if (downloadUrl) document.getElementById('downloadButton').href = downloadUrl
+          const notes = document.getElementById('notes')
+          notes.innerHTML = ''
+          for (const note of manifest.notes || []) {
+            const item = document.createElement('li')
+            item.textContent = note
+            notes.appendChild(item)
+          }
+        })
+        .catch(() => {
+          // The static fallback content above remains usable.
+        })
+    </script>
+  </body>
+</html>
