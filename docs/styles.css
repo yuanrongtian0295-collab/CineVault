@@ -100,6 +100,11 @@ h1 {
   box-shadow: 0 14px 30px rgba(169, 124, 56, 0.25);
 }
 
+.download-actions {
+  display: grid;
+  gap: 10px;
+}
+
 .button.secondary {
   border: 1px solid var(--cv-border);
   background: var(--cv-panel);
