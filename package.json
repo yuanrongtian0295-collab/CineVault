@@ -1,0 +1,120 @@
+{
+  "name": "cinevault",
+  "version": "0.1.2",
+  "description": "CineVault / 影匣 - local AI film asset library",
+  "main": "out/main/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "typecheck": "tsc -p tsconfig.web.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "build": "npm run typecheck && electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts,.tsx",
+    "qa:electron": "node scripts/qa-electron-smoke.mjs",
+    "qa:v02-ipc": "node scripts/verify-v02-ipc.mjs",
+    "qa:v03-storyboard": "node scripts/verify-v03-storyboard-ipc.mjs",
+    "qa:v031-import": "node scripts/verify-v031-import.mjs",
+    "qa:v04-scripts": "node scripts/verify-v04-scripts-ipc.mjs",
+    "qa:v04-scripts-ai": "node scripts/verify-v04-scripts-ai-ipc.mjs",
+    "qa:v04-versions": "node scripts/verify-v04-versions-ipc.mjs",
+    "qa:v04-relationship-graph": "node scripts/verify-v04-relationship-graph-ipc.mjs",
+    "qa:v04-tools": "node scripts/verify-v04-tools-ipc.mjs",
+    "qa:v04-ai": "node scripts/verify-v04-ai-ipc.mjs",
+    "qa:v04-generation": "node scripts/verify-v04-generation-ipc.mjs",
+    "qa:v04-pages": "node scripts/verify-v04-pages-ipc.mjs",
+    "qa:v05-canvas": "node scripts/verify-v05-canvas-ipc.mjs",
+    "qa:v06-text-chat": "node scripts/verify-v06-text-chat.mjs",
+    "dist": "npm run build && electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "sqlite",
+    "assets"
+  ],
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "appId": "com.cinevault.app",
+    "productName": "CineVault",
+    "directories": {
+      "output": "release"
+    },
+    "artifactName": "CineVault-Setup-${version}.${ext}",
+    "files": [
+      "out/**/*",
+      "resources/**/*",
+      "!resources/bin/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.video"
+    },
+    "win": {
+      "icon": "resources/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "shortcutName": "CineVault",
+      "deleteAppDataOnUninstall": false
+    }
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "@xyflow/react": "^12.11.0",
+    "clsx": "^2.1.1",
+    "electron-store": "^11.0.2",
+    "ffmpeg-static": "^5.3.0",
+    "lucide-react": "^1.20.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.0",
+    "sharp": "^0.35.1",
+    "tldraw": "^5.1.1",
+    "xlsx": "^0.18.5",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^2.0.0",
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "autoprefixer": "^10.5.0",
+    "electron": "^35.7.5",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.6.0",
+    "jsdom": "^29.1.1",
+    "playwright": "^1.61.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1",
+    "vite": "^7.3.5",
+    "vitest": "^4.1.9"
+  }
+}
