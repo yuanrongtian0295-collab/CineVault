@@ -1,0 +1,20 @@
+{
+  "version": "0.1.2",
+  "releaseDate": "2026-06-25",
+  "downloadPageUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
+  "installerUrl": "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe",
+  "downloadUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
+  "fileSize": "236 MB",
+  "sha256": "34a6994f44be1deaa3d7e406af11568f8968467127b8be3fbc07d2821f28a274",
+  "notes": [
+    "发布 CineVault v0.1.2 Windows 安装包。",
+    "安装器增加桌面快捷方式选项，用户可在安装时选择是否创建桌面快捷方式。",
+    "同步当前版本的 AI 生成、智能画布、分镜墙、下载页和界面修复。"
+  ],
+  "mirrors": [
+    {
+      "name": "GitHub 备用下载",
+      "url": "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe"
+    }
+  ]
+}
