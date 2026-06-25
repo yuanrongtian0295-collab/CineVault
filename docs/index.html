@@ -19,15 +19,20 @@
         <aside class="download-card">
           <div>
             <div class="version">&#26368;&#26032;&#29256;&#26412;</div>
-            <h2 id="version">v0.1.1</h2>
+            <h2 id="version">v0.1.2</h2>
           </div>
-          <a id="downloadButton" class="button" href="https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.1/CineVault-Setup-0.1.1.exe">
-            &#19979;&#36733; Windows &#23433;&#35013;&#21253;
-          </a>
-          <a class="button secondary" href="./update-manifest.json">&#26597;&#30475;&#26356;&#26032;&#28165;&#21333;</a>
+          <div class="download-actions">
+            <a id="downloadButton" class="button" href="https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe">
+              高速下载
+            </a>
+            <a id="mirrorButton" class="button secondary" href="https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe">
+              GitHub 备用下载
+            </a>
+            <a class="button secondary" href="./update-manifest.json">&#26597;&#30475;&#26356;&#26032;&#28165;&#21333;</a>
+          </div>
           <div class="meta">
             <span id="releaseDate">&#21457;&#24067;&#26085;&#26399;&#65306;2026-06-24</span>
-            <span id="fileSize">&#23433;&#35013;&#21253;&#22823;&#23567;&#65306;218 MB</span>
+            <span id="fileSize">&#23433;&#35013;&#21253;&#22823;&#23567;&#65306;236 MB</span>
             <span>&#36866;&#29992;&#20110; Windows NSIS &#23433;&#35013;&#21253;</span>
           </div>
         </aside>
@@ -37,7 +42,7 @@
         <article class="panel">
           <h2>&#26356;&#26032;&#20869;&#23481;</h2>
           <ul id="notes">
-            <li>发布 CineVault v0.1.1 Windows 安装包。</li>
+            <li>发布 CineVault v0.1.2 Windows 安装包。</li>
             <li>设置页更新清单改为内置远程地址，用户无需手动填写。</li>
             <li>同步当前版本的 AI 生成、智能画布、分镜墙、下载页和界面修复。</li>
           </ul>
@@ -71,6 +76,12 @@
           document.getElementById('fileSize').textContent = `安装包大小：${manifest.fileSize || '待填写'}`
           const downloadUrl = manifest.installerUrl || manifest.downloadUrl
           if (downloadUrl) document.getElementById('downloadButton').href = downloadUrl
+          const mirrors = Array.isArray(manifest.mirrors) ? manifest.mirrors : []
+          const githubMirror = mirrors.find((mirror) => /github/i.test(`${mirror.name || ''} ${mirror.url || ''}`)) || mirrors[0]
+          if (githubMirror?.url) {
+            document.getElementById('mirrorButton').href = githubMirror.url
+            document.getElementById('mirrorButton').textContent = githubMirror.name || '备用下载'
+          }
           const notes = document.getElementById('notes')
           notes.innerHTML = ''
           for (const note of manifest.notes || []) {
