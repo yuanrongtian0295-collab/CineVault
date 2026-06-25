@@ -22,16 +22,12 @@
             <h2 id="version">v0.1.2</h2>
           </div>
           <div class="download-actions">
-            <a id="downloadButton" class="button" href="https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe">
-              高速下载
-            </a>
-            <a id="mirrorButton" class="button secondary" href="https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe">
-              GitHub 备用下载
-            </a>
+            <a id="downloadButton" class="button" href="https://pan.quark.cn/s/76798add0754">夸克网盘下载（提取码 ypc4）</a>
+            <a id="mirrorButton" class="button secondary" href="https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe">GitHub 备用下载</a>
             <a class="button secondary" href="./update-manifest.json">&#26597;&#30475;&#26356;&#26032;&#28165;&#21333;</a>
           </div>
           <div class="meta">
-            <span id="releaseDate">&#21457;&#24067;&#26085;&#26399;&#65306;2026-06-24</span>
+            <span id="releaseDate">发布日期：2026-06-25</span>
             <span id="fileSize">&#23433;&#35013;&#21253;&#22823;&#23567;&#65306;236 MB</span>
             <span>&#36866;&#29992;&#20110; Windows NSIS &#23433;&#35013;&#21253;</span>
           </div>
@@ -63,7 +59,7 @@
         </article>
       </section>
 
-      <div class="footer">&#22914;&#26524;&#20027;&#19979;&#36733;&#38142;&#25509;&#19981;&#21487;&#29992;&#65292;&#21487;&#20197;&#22312;&#36825;&#37324;&#39044;&#30041;&#32593;&#30424;&#25110;&#22791;&#29992;&#19979;&#36733;&#22320;&#22336;&#12290;</div>
+      <div class="footer">主下载使用夸克网盘，提取码：ypc4。若网盘不可用，可使用 GitHub 备用下载。</div>
     </main>
 
     <script>
@@ -74,9 +70,11 @@
           document.getElementById('version').textContent = `v${manifest.version}`
           document.getElementById('releaseDate').textContent = `发布日期：${manifest.releaseDate}`
           document.getElementById('fileSize').textContent = `安装包大小：${manifest.fileSize || '待填写'}`
-          const downloadUrl = manifest.installerUrl || manifest.downloadUrl
-          if (downloadUrl) document.getElementById('downloadButton').href = downloadUrl
           const mirrors = Array.isArray(manifest.mirrors) ? manifest.mirrors : []
+          const primaryMirror = mirrors.find((mirror) => /quark|\u5938\u514b/i.test(`${mirror.name || ''} ${mirror.url || ''}`))
+          const downloadUrl = primaryMirror?.url || manifest.installerUrl || manifest.downloadUrl
+          if (downloadUrl) document.getElementById('downloadButton').href = downloadUrl
+          if (primaryMirror?.name) document.getElementById('downloadButton').textContent = primaryMirror.name
           const githubMirror = mirrors.find((mirror) => /github/i.test(`${mirror.name || ''} ${mirror.url || ''}`)) || mirrors[0]
           if (githubMirror?.url) {
             document.getElementById('mirrorButton').href = githubMirror.url
