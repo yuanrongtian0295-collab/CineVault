@@ -1,6 +1,6 @@
 {
   "name": "cinevault",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CineVault / 影匣 - local AI film asset library",
   "main": "out/main/index.js",
   "type": "module",
