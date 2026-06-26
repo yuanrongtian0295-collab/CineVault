@@ -1,26 +1,26 @@
-{
-  "version": "0.1.2",
-  "releaseDate": "2026-06-25",
-  "downloadPageUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
-  "installerUrl": "https://pan.quark.cn/s/76798add0754",
-  "downloadUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
-  "fileSize": "236 MB",
-  "sha256": "34a6994f44be1deaa3d7e406af11568f8968467127b8be3fbc07d2821f28a274",
-  "extractionCode": "ypc4",
-  "notes": [
-    "发布 CineVault v0.1.2 Windows 安装包。",
-    "安装器增加桌面快捷方式选项，用户可在安装时选择是否创建桌面快捷方式。",
-    "新增夸克网盘下载通道（提取码：ypc4），GitHub 保留为备用下载。"
-  ],
-  "mirrors": [
-    {
-      "name": "夸克网盘下载（提取码 ypc4）",
-      "url": "https://pan.quark.cn/s/76798add0754",
-      "extractionCode": "ypc4"
-    },
-    {
-      "name": "GitHub 备用下载",
-      "url": "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.2/CineVault-Setup-0.1.2.exe"
-    }
-  ]
+﻿{
+    "version":  "0.1.3",
+    "releaseDate":  "2026-06-26",
+    "downloadPageUrl":  "https://yuanrongtian0295-collab.github.io/CineVault/",
+    "installerUrl":  "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.3/CineVault-Setup-0.1.3.exe",
+    "downloadUrl":  "https://yuanrongtian0295-collab.github.io/CineVault/",
+    "fileSize":  "267.7 MB",
+    "sha256":  "f469b6d8335e173d02ff6d5f839ed42b144b19fa643e2b8f3bab2e8e9029bbf6",
+    "extractionCode":  "",
+    "notes":  [
+                  "发布 CineVault v0.1.3 Windows 安装包。",
+                  "完成资产详情页绑定关系正式组件化：支持搜索绑定、统一弹窗新建、点击跳转详情和镜头用途编辑。",
+                  "同步近期资产墙、AI 生成、模型路由、设置与项目页导航体验优化。"
+              ],
+    "mirrors":  [
+                    {
+                        "name":  "GitHub 备用下载",
+                        "url":  "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.3/CineVault-Setup-0.1.3.exe"
+                    },
+                    {
+                        "name":  "夸克网盘下载（待上传后替换）",
+                        "url":  "",
+                        "extractionCode":  ""
+                    }
+                ]
 }
