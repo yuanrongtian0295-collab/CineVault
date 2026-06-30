@@ -1,18 +1,20 @@
 {
   "version": "0.1.4",
-  "releaseDate": "2026-06-29",
+  "releaseDate": "2026-06-30",
   "downloadPageUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
   "installerUrl": "https://pan.quark.cn/s/7e58d42ac592",
   "downloadUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
-  "fileSize": "275.0 MB",
-  "sha256": "c9b4c6aa5d11a234bc50023f7e190f10bb694c6e5123ebc3385e1285171fb260",
+  "fileSize": "280.3 MB",
+  "sha256": "d8c9fa7b2a72703b1d9ce81c2da61923b54922cfcd0c7c0e869b12a7783305b0",
   "extractionCode": "",
   "notes": [
     "发布 CineVault v0.1.4 Windows 安装包。",
     "统一项目内页面顶部导航、资产墙和 Storyboard 卡片样式，修复总览页空白预留列。",
     "完善资产详情与 Storyboard 详情的内部滚动、隐藏滚动条、底部柔和遮罩和弹出体验。",
     "新增剧本分镜拆解与 Storyboard 结构化编辑能力，补充景别、角度、运镜等快捷切换。",
-    "优化 AI 模型配置、自动路由、厂商图标、全局右键菜单和多 Provider 设置入口。"
+    "优化 AI 模型配置、自动路由、厂商图标、全局右键菜单和多 Provider 设置入口。",
+    "剧本导入改为解析后立即进入 AI 提炼，并展示模型原始返回日志。",
+    "增强长剧本导入稳定性，避免超长文本和关系预览导致页面卡死。"
   ],
   "mirrors": [
     {
