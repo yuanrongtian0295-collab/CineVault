@@ -1,14 +1,14 @@
 {
-  "version": "0.1.4",
-  "releaseDate": "2026-06-30",
+  "version": "0.1.5",
+  "releaseDate": "2026-07-01",
   "downloadPageUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
   "installerUrl": "https://pan.quark.cn/s/7e58d42ac592",
   "downloadUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
-  "fileSize": "280.3 MB",
-  "sha256": "d8c9fa7b2a72703b1d9ce81c2da61923b54922cfcd0c7c0e869b12a7783305b0",
+  "fileSize": "284.3 MB",
+  "sha256": "19b7e8765f1e34153b704fc1d25aad5b434e63d909fd6cee9cc7c7f6d02e4928",
   "extractionCode": "",
   "notes": [
-    "发布 CineVault v0.1.4 Windows 安装包。",
+    "发布 CineVault v0.1.5 Windows 安装包。",
     "统一项目内页面顶部导航、资产墙和 Storyboard 卡片样式，修复总览页空白预留列。",
     "完善资产详情与 Storyboard 详情的内部滚动、隐藏滚动条、底部柔和遮罩和弹出体验。",
     "新增剧本分镜拆解与 Storyboard 结构化编辑能力，补充景别、角度、运镜等快捷切换。",
@@ -24,7 +24,7 @@
     },
     {
       "name": "GitHub 备用下载",
-      "url": "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.4/CineVault-Setup-0.1.4.exe"
+      "url": "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.5/CineVault-Setup-0.1.5.exe"
     }
   ]
 }
