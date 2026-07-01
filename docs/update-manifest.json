@@ -1,30 +1,26 @@
-{
-  "version": "0.1.5",
-  "releaseDate": "2026-07-01",
-  "downloadPageUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
-  "installerUrl": "https://pan.quark.cn/s/7e58d42ac592",
-  "downloadUrl": "https://yuanrongtian0295-collab.github.io/CineVault/",
-  "fileSize": "284.3 MB",
-  "sha256": "19b7e8765f1e34153b704fc1d25aad5b434e63d909fd6cee9cc7c7f6d02e4928",
-  "extractionCode": "",
-  "notes": [
-    "发布 CineVault v0.1.5 Windows 安装包。",
-    "统一项目内页面顶部导航、资产墙和 Storyboard 卡片样式，修复总览页空白预留列。",
-    "完善资产详情与 Storyboard 详情的内部滚动、隐藏滚动条、底部柔和遮罩和弹出体验。",
-    "新增剧本分镜拆解与 Storyboard 结构化编辑能力，补充景别、角度、运镜等快捷切换。",
-    "优化 AI 模型配置、自动路由、厂商图标、全局右键菜单和多 Provider 设置入口。",
-    "剧本导入改为解析后立即进入 AI 提炼，并展示模型原始返回日志。",
-    "增强长剧本导入稳定性，避免超长文本和关系预览导致页面卡死。"
-  ],
-  "mirrors": [
-    {
-      "name": "夸克网盘下载",
-      "url": "https://pan.quark.cn/s/7e58d42ac592",
-      "extractionCode": ""
-    },
-    {
-      "name": "GitHub 备用下载",
-      "url": "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.5/CineVault-Setup-0.1.5.exe"
-    }
-  ]
+﻿{
+    "version":  "0.1.6",
+    "releaseDate":  "2026-07-01",
+    "downloadPageUrl":  "https://yuanrongtian0295-collab.github.io/CineVault/",
+    "installerUrl":  "https://pan.quark.cn/s/7e58d42ac592",
+    "downloadUrl":  "https://yuanrongtian0295-collab.github.io/CineVault/",
+    "fileSize":  "289.8 MB",
+    "sha256":  "24eeb78ed51b2c86cc11b3209da9f5869d96dbd187c77a4c736b9455bb90986b",
+    "extractionCode":  "",
+    "notes":  [
+                  "Release CineVault v0.1.6 Windows installer.",
+                  "Keep the Quark cloud drive download link unchanged for manual upload to the same folder.",
+                  "Refresh the in-app update manifest and release download page for v0.1.6."
+              ],
+    "mirrors":  [
+                    {
+                        "name":  "Quark cloud drive download",
+                        "url":  "https://pan.quark.cn/s/7e58d42ac592",
+                        "extractionCode":  ""
+                    },
+                    {
+                        "name":  "GitHub backup download",
+                        "url":  "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.6/CineVault-Setup-0.1.6.exe"
+                    }
+                ]
 }
