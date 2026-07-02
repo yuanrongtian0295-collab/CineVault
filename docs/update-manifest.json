@@ -1,16 +1,16 @@
 ﻿{
-    "version":  "0.1.6",
-    "releaseDate":  "2026-07-01",
+    "version":  "0.1.7",
+    "releaseDate":  "2026-07-02",
     "downloadPageUrl":  "https://yuanrongtian0295-collab.github.io/CineVault/",
     "installerUrl":  "https://pan.quark.cn/s/7e58d42ac592",
     "downloadUrl":  "https://yuanrongtian0295-collab.github.io/CineVault/",
-    "fileSize":  "289.8 MB",
-    "sha256":  "24eeb78ed51b2c86cc11b3209da9f5869d96dbd187c77a4c736b9455bb90986b",
+    "fileSize":  "292.3 MB",
+    "sha256":  "31ae1027b026a648cb831b4872ae8922992dd832b08dc0d3093cac373ef21d1b",
     "extractionCode":  "",
     "notes":  [
-                  "Release CineVault v0.1.6 Windows installer.",
+                  "Release CineVault v0.1.7 Windows installer.",
                   "Keep the Quark cloud drive download link unchanged for manual upload to the same folder.",
-                  "Refresh the in-app update manifest and release download page for v0.1.6."
+                  "Refresh the in-app update manifest and release download page for v0.1.7."
               ],
     "mirrors":  [
                     {
@@ -20,7 +20,7 @@
                     },
                     {
                         "name":  "GitHub backup download",
-                        "url":  "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.6/CineVault-Setup-0.1.6.exe"
+                        "url":  "https://github.com/yuanrongtian0295-collab/CineVault/releases/download/v0.1.7/CineVault-Setup-0.1.7.exe"
                     }
                 ]
 }
